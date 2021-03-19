@@ -8,12 +8,16 @@ a {
     font-size: 13px;
     color: rgba(0,0,0,0.87)
 }
+/* Header CSS */
+
 #navbar {
     display: grid;
     grid-template-columns: 50px 50px 1fr 50px 50px 50px 50px;
     grid-template-rows: 50px;
     grid-template-areas: "about store . gmail images waffle signin";
 }
+
+
 #about {
     grid-area: about;
     justify-self: center;
@@ -34,13 +38,41 @@ a {
     justify-self: center;
     align-self: center;
 }
-#waffle{
+#waffle {
     grid-area: waffle;
     justify-self: center;
     align-self: center;
 }
-#signin{
+#signin {
     grid-area: signin; 
     justify-self: center;
     align-self: center;
+}
+
+/* End of navbar */
+
+/* Main content, search bar */
+
+#main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 70px 70px 200px;
+    grid-template-areas: 
+    ". logo ."
+    ". searchbar ."
+    ". google-search lucky .";
+}
+
+#logo {
+    grid-area: logo;
+    vertical-align: bottom;
+}
+#searchbar {
+    grid-area: searchbar;
+}
+#google-search {
+    grid-area: google-search;
+}
+#lucky {
+    grid-area: lucky;
 }
